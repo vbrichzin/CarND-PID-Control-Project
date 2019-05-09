@@ -13,5 +13,5 @@ The integral component I of the PID controller is summing the historic total of 
 
 #### 2. Describe how the final hyperparameters (P, I, D components) were chosen.
 The hyperparameters were actually chosen manually. Already with the first set of values chosen (0.1, 0.001, 1.0) I was lucky and got some encouraging results. The I value was chosen small on purpose as it sums the CTE error over a long time and bigger values might put too much weight on the I component of the controller. The D value was chosen bigger than the P value as it acts already on the differential which should be smaller than the difference the P value is acting on.
-In tuning the parameters some more I arrived at P=0.14, I=0.001 and D=2.0. With these values I was even able to increase the throttle value to 0.35 leading to a maximum speed of roughly 40mph.
+In tuning the parameters some more I arrived at P=0.13, I=0.0015 and D=3.5.
 No Twiddle or SGD is used which certainly would provide even better hyperparameters especially necessary for higher speed settings tuning efforts.
